@@ -6,6 +6,34 @@ export default function Home() {
       <Head>
         <title>TikiTour — Adventure Tours</title>
         <meta name="description" content="TikiTour — curated adventure tours around the world" />
+        <link rel="canonical" href="https://kh-tikitour.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="TikiTour — Adventure Tours" />
+        <meta property="og:description" content="Small-group trips, local guides, unforgettable experiences." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kh-tikitour.com/" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80&auto=format&fit=crop" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TikiTour — Adventure Tours" />
+        <meta name="twitter:description" content="Small-group trips, local guides, unforgettable experiences." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80&auto=format&fit=crop" />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TikiTour",
+              url: "https://kh-tikitour.com",
+              logo: "https://kh-tikitour.com/logo.png",
+            }),
+          }}
+        />
       </Head>
 
       <main className="min-h-screen bg-slate-50 text-slate-900">
