@@ -5,10 +5,13 @@ export default function Home() {
     <>
       <Head>
         <title>TikiTour — Adventure Tours</title>
-        <meta name="description" content="TikiTour — curated adventure tours around the world" />
+        <meta name="description" content="TikiTour offers curated adventure tours with local guides, small groups and sustainable travel." />
+        <meta name="keywords" content="adventure tours, travel company, small group tours, local guides, sustainable travel" />
+        <meta name="theme-color" content="#047857" />
         <link rel="canonical" href="https://kh-tikitour.com/" />
 
         {/* Open Graph */}
+        <meta property="og:site_name" content="TikiTour" />
         <meta property="og:title" content="TikiTour — Adventure Tours" />
         <meta property="og:description" content="Small-group trips, local guides, unforgettable experiences." />
         <meta property="og:type" content="website" />
@@ -27,10 +30,63 @@ export default function Home() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "TravelAgency",
               name: "TikiTour",
               url: "https://kh-tikitour.com",
               logo: "https://kh-tikitour.com/logo.png",
+              description: "Curated adventure tours with local guides, small groups and sustainable travel.",
+              sameAs: [
+                "https://www.facebook.com/kh-tikitour",
+                "https://www.instagram.com/kh-tikitour"
+              ],
++              hasOfferCatalog: {
++                "@type": "OfferCatalog",
++                name: "Adventure Tour Packages",
++                itemListElement: [
++                  {
++                    "@type": "OfferCatalog",
++                    name: "Featured Tours",
++                    itemListElement: [
++                      {
++                        "@type": "Offer",
++                        itemOffered: {
++                          "@type": "TouristTrip",
++                          name: "Bali Explorer",
++                          description: "A 7-day small-group exploration of Bali's beaches, culture, and rice terraces.",
++                          itinerary: "Temples, surf towns, rice terraces, waterfalls",
++                          tourOperator: { "@type": "TravelAgency", name: "TikiTour" }
++                        },
++                        price: "1299.00",
++                        priceCurrency: "USD"
++                      },
++                      {
++                        "@type": "Offer",
++                        itemOffered: {
++                          "@type": "TouristTrip",
++                          name: "Patagonian Trek",
++                          description: "A 10-day guided trekking adventure through Patagonia's dramatic landscapes.",
++                          itinerary: "Glaciers, mountain valleys, coastal viewpoints",
++                          tourOperator: { "@type": "TravelAgency", name: "TikiTour" }
++                        },
++                        price: "2499.00",
++                        priceCurrency: "USD"
++                      },
++                      {
++                        "@type": "Offer",
++                        itemOffered: {
++                          "@type": "TouristTrip",
++                          name: "Alpine Escape",
++                          description: "A 5-day alpine getaway in the mountains with guided hikes and cozy stays.",
++                          itinerary: "Mountain huts, alpine lakes, scenic trails",
++                          tourOperator: { "@type": "TravelAgency", name: "TikiTour" }
++                        },
++                        price: "999.00",
++                        priceCurrency: "USD"
++                      }
++                    ]
++                  }
++                ]
++              }
             }),
           }}
         />
