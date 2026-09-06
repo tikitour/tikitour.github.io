@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/ladmin/Documents/GitHub/tikitour.github.io/app/layout":["static/media/7b0b24f36b1a6d0b-s.p.woff2","static/media/6ba5f591ae6c56f6-s.p.woff2","static/media/af4bf8399d1aacdf-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

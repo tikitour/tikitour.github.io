@@ -1,11 +1,13 @@
-const nextConfig = {
-  output: 'export',
-  // Optional: Add a trailing slash to URLs (e.g., /about/)
-  trailingSlash: true, 
-  // Optional: Disable standard Image Optimization if hosting on a basic static platform
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+  distDir: "docs",
   images: {
     unoptimized: true,
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
