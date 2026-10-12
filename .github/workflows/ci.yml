@@ -31,7 +31,7 @@ jobs:
         working-directory: project
         run: npm run build
       - name: Verify static export
-        run: test -f index.html && test -f CNAME && test -f tours/sunrise-coastal-circuit/index.html
+        run: test -f project/out/index.html && test -f project/out/CNAME && test -f project/out/tours/sunrise-coastal-circuit/index.html
       - name: Upload static export
         uses: actions/upload-pages-artifact@v3
         with:

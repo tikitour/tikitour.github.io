@@ -19,8 +19,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tour = TOURS.find((t) => t.slug === slug);
   if (!tour) return {};
   return {
-    title: `${tour.name} — Aegéan Koh Rong Sanloem`,
-    description: tour.longDescription.slice(0, 160),
+    title: tour.name,
+    description: tour.description,
+    alternates: {
+      canonical: `/tours/${tour.slug}/`,
+    },
+    openGraph: {
+      type: "website",
+      title: `${tour.name} | Tiki Tour Cambodia`,
+      description: tour.description,
+      url: `/tours/${tour.slug}/`,
+      images: [
+        {
+          url: tour.heroImage,
+          width: 1200,
+          height: 600,
+          alt: tour.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${tour.name} | Tiki Tour Cambodia`,
+      description: tour.description,
+      images: [tour.heroImage],
+    },
   };
 }
 
@@ -36,9 +59,44 @@ export default async function TourPage({ params }: Props) {
   if (!tour) notFound();
 
   const otherTours = TOURS.filter((t) => t.slug !== tour.slug);
+  const tourSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: tour.name,
+    description: tour.longDescription,
+    url: `https://kh-tikitour.com/tours/${tour.slug}/`,
+    image: tour.heroImage,
+    provider: {
+      "@type": "Organization",
+      name: "Tiki Tour Cambodia",
+      url: "https://kh-tikitour.com/",
+    },
+    itinerary: {
+      "@type": "ItemList",
+      itemListElement: tour.itinerary.map((stop, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: stop.title,
+        description: stop.description,
+      })),
+    },
+    offers: {
+      "@type": "Offer",
+      price: tour.priceNum,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `https://kh-tikitour.com/tours/${tour.slug}/`,
+    },
+  };
 
   return (
     <div className="min-h-screen bg-[#f5f0e8] overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(tourSchema).replace(/</g, "\\u003c"),
+        }}
+      />
 
       {/* MINI NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#f5f0e8]/90 backdrop-blur-md border-b border-[#e0d8ce] px-6 py-4 flex items-center justify-between">
