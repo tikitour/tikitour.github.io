@@ -30,13 +30,13 @@ export interface Tour {
 export const TOURS: Tour[] = [
   {
     slug: "sunrise-coastal-circuit",
-    name: "Sunrise Coastal Circuit",
-    tagline: "Golden light, secret cliffs, and a sea that glows.",
-    duration: "4 hours",
-    price: "$89",
-    priceNum: 89,
-    maxGuests: 12,
-    time: "6:30 AM",
+    name: "Full Island Explorer",
+    tagline: "A complete circumnavigation with snorkeling stops, a beach lunch, and access to the secluded Blue Lagoon.",
+    duration: "7 hours",
+    price: "$45/pax",
+    priceNum: 45,
+    maxGuests: 16,
+    time: "1:00 PM - 7:00PM",
     difficulty: "Easy",
     minAge: 5,
     description:
@@ -44,9 +44,9 @@ export const TOURS: Tour[] = [
     longDescription:
       "There is no better way to begin a day on Koh Rong Sanloem than from the bow of a boat as the sun breaks over the Cardamom Mountains. This four-hour circuit hugs the island's dramatic eastern shoreline, passing limestone outcrops, jungle-fringed coves that appear on no map, and the bioluminescent bay that still glows faintly at dawn. A light Khmer breakfast — fresh fruit, sticky rice, and iced coffee — is served on deck as you watch the island wake up. Return to the pier by 10:30 AM with enough morning left to explore the village or claim a hammock before the crowds arrive.",
     image:
-      "https://images.unsplash.com/photo-1637578338411-ecb137b7bbb7?w=600&h=400&fit=crop&auto=format",
+      "/images/mangrove/mangrove-01.jpg",
     heroImage:
-      "https://images.unsplash.com/photo-1772356847188-2f35d5d4177c?w=1800&h=900&fit=crop&auto=format",
+      "/images/mangrove/mangrove-01.jpg",
     badge: "Most Popular",
     includes: [
       "Khmer breakfast (fruit, sticky rice, iced coffee)",
@@ -147,12 +147,12 @@ export const TOURS: Tour[] = [
     ],
   },
   {
-    slug: "full-island-explorer",
-    name: "Full Island Explorer",
-    tagline: "Eight hours. Every cove. One unforgettable circumnavigation.",
+    slug: "the-private-tide",
+    name: "The Private Tide",
+    tagline: "Snorkel, fish, chase the sunset, swim with glowing plankton, on your own private boat",
     duration: "8 hours",
-    price: "$165",
-    priceNum: 165,
+    price: "$150",
+    priceNum: 150,
     maxGuests: 8,
     time: "9:00 AM",
     difficulty: "Moderate",
@@ -162,7 +162,7 @@ export const TOURS: Tour[] = [
     longDescription:
       "The Full Island Explorer is our flagship journey — a complete circumnavigation of Koh Rong Sanloem for those who want to see everything the island holds. You'll snorkel two distinct reef systems, swim in the legendary Blue Lagoon accessible only by boat, and picnic on a beach that sees fewer than twenty visitors a day. A freshly prepared Khmer seafood lunch is served under the shade of swaying palms at our private beach stop. With just eight guests per departure, this is the most intimate way to know the island. Come back knowing its every secret.",
     image:
-      "https://images.unsplash.com/photo-1645109344928-b1efdeecfae5?w=600&h=400&fit=crop&auto=format",
+      "/images/boat-tour/tikitour-01.jpg",
     heroImage:
       "https://images.unsplash.com/photo-1651510709022-e3b9d1e32950?w=1800&h=900&fit=crop&auto=format",
     badge: "Best Value",
@@ -287,7 +287,7 @@ export const TOURS: Tour[] = [
     longDescription:
       "As the heat of the afternoon softens and the western sky begins its slow transformation, we slip out of the harbour and turn toward the open sea. The Sunset & Stars cruise is three hours of deliberate stillness — cold drinks in hand, music low, the silhouette of Koh Rong Sanloem darkening against an extraordinary canvas. As night falls, we drift into the bioluminescent bay where the water glows a vivid blue-green with every movement. A phenomenon caused by single-celled plankton, it is one of the rarest and most otherworldly experiences in Southeast Asia — and it happens every single night.",
     image:
-      "https://images.unsplash.com/photo-1651510688982-75f481b89027?w=600&h=400&fit=crop&auto=format",
+      "/images/coconut-oil/coconut-oil.jpg",
     heroImage:
       "https://images.unsplash.com/photo-1610987067729-4c3d2e98eb57?w=1800&h=900&fit=crop&auto=format",
     badge: "Romantic",

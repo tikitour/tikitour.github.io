@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { TOURS } from "@/lib/data";
 import TourBookingPanel from "@/components/TourBookingPanel";
 import TourFAQ from "@/components/TourFAQ";
+import TourHeroSlideshow from "@/components/TourHeroSlideshow";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -105,7 +106,7 @@ export default async function TourPage({ params }: Props) {
           <span>All Tours</span>
         </Link>
         <div className="font-display text-[#1a1a2e] text-xl font-semibold tracking-tight">
-          Aegéan<span className="text-[#e8a04a]">.</span>
+          Tiki Tour Cambodia<span className="text-[#e8a04a]">.</span>
         </div>
         <Link href="#book"
           className="bg-[#e8a04a] text-[#1a1a2e] text-sm font-semibold px-5 py-2 rounded-full hover:bg-[#d48f39] transition-colors hidden sm:block">
@@ -115,12 +116,11 @@ export default async function TourPage({ params }: Props) {
 
       {/* HERO */}
       <section className="relative h-[70vh] min-h-[480px] flex items-end overflow-hidden pt-16">
-        <Image
-          src={tour.heroImage}
-          alt={tour.name}
-          fill
-          priority
-          className="object-cover"
+        <TourHeroSlideshow
+          images={[
+            { url: tour.heroImage, alt: tour.name },
+            ...tour.galleryImages,
+          ]}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,26,46,0.85) 0%, rgba(26,26,46,0.2) 60%, transparent 100%)" }} />
         <div className="relative z-10 px-6 md:px-16 pb-12 max-w-4xl">
@@ -286,10 +286,10 @@ export default async function TourPage({ params }: Props) {
       {/* FOOTER */}
       <footer className="bg-[#1a1a2e] py-10 px-6 text-center">
         <div className="font-display text-white text-xl font-semibold mb-2">
-          Aegéan<span className="text-[#e8a04a]">.</span>
+          Tiki Tour Cambodia<span className="text-[#e8a04a]">.</span>
         </div>
         <p className="text-white/30 text-xs">
-          Koh Rong Sanloem, Sihanoukville, Cambodia · info@aegean-tours.com
+          Koh Rong Sanloem, Sihanoukville, Cambodia · khtikitour@gmail.com
         </p>
       </footer>
 

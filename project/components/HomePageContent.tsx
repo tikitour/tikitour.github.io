@@ -48,11 +48,11 @@ export default function HomePageContent() {
       {/* Footer */}
       <footer className="bg-[#1a1a2e] py-12 px-6 text-center">
         <div className="font-display text-white text-2xl font-semibold mb-3">
-          Aegéan<span className="text-[#e8a04a]">.</span>
+          Tiki Tour Cambodia<span className="text-[#e8a04a]">.</span>
         </div>
         <p className="text-white/40 text-sm mb-6">
-          Koh Rong Sanloem, Sihanoukville, Cambodia · info@aegean-tours.com ·
-          +855 12 000 000
+          Koh Rong Sanloem, Sihanoukville, Cambodia · khtikitour@gmail.com ·
+          +855 16 777 631
         </p>
         <div className="flex justify-center gap-6 text-white/30 text-xs">
           <a href="#" className="hover:text-white/60 transition-colors">
@@ -66,7 +66,7 @@ export default function HomePageContent() {
           </a>
         </div>
         <p className="text-white/20 text-xs mt-8">
-          © 2026 Aegéan Island Tours. All rights reserved.
+          © 2026 Tiki Tour Cambodia. All rights reserved.
         </p>
       </footer>
     </main>

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && cp ../CNAME out/CNAME",
-    "export:root": "npm run build && cp -R out/. ../ && rm -rf out",
+    "export": "npm run build && cp -R out/. ../ && rm -rf out",
     "start": "python3 -m http.server 8000 --directory ..",
     "format": "oxfmt"
   },

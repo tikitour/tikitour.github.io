@@ -17,7 +17,7 @@ export default function Navbar() {
         }}
       >
         <div className="font-display text-white text-2xl font-semibold tracking-tight">
-          Aegéan<span className="text-[#e8a04a]">.</span>
+          Tiki Tour Cambodia<span className="text-[#e8a04a]">.</span>
         </div>
 
         {/* Desktop */}
